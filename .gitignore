@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+.env
+env
+
+# IDEs
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Pytest
+.cache/
+.pytest_cache/
+.pytest_cache
+
+# FastAPI / Uvicorn
+instance/
+*.db
+*.sqlite3
+
+# Pydantic schema cache (if used)
+__pydantic__/ 
+
+# dotenv
+.env
+.env.*
+
+# migrations (if using alembic)
+migrations/versions/
+
+# logs
+*.log
+logs/
+
