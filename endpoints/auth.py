@@ -7,15 +7,12 @@ from models.user import User
 from services.jwt import create_access_token, create_refresh_token
 import config
 
-
 router = APIRouter(prefix='/auth')
-
 
 @router.get('/google', status_code=status.HTTP_200_OK)
 async def login_by_google(request:Request):
     redirect_uri = request.url_for('auth_callback')
     return await oauth.google.authorize_redirect(request, redirect_uri)
-
 
 @router.get('/google/callback', name='auth_callback')
 async def google_auth_callback(request: Request, response: Response, db: Session = Depends(get_db)):

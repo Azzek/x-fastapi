@@ -4,7 +4,6 @@ from jose import jwt, JWTError
 from datetime import datetime, timedelta
 from fastapi import HTTPException
 
-
 def create_access_token(data:dict):
     
     to_encode = data.copy()

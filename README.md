@@ -1,4 +1,5 @@
 # X-FastAPI
+
 A FastAPI-based backend project featuring authentication, authorization, and post management. Designed for simplicity, speed, and scalability.
 
 ## Features
@@ -21,12 +22,14 @@ A FastAPI-based backend project featuring authentication, authorization, and pos
 ## 🛠 Setup Instructions
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Azzek/x-fastapi.git
    cd x-fastapi
    ```
 
 2. **Create and activate a virtual environment**
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # on Windows use: venv\Scripts\activate
@@ -37,18 +40,9 @@ A FastAPI-based backend project featuring authentication, authorization, and pos
    pip install -r requirements.txt
    ```
 4. **Get up your .env file**
-   Create a .env file in the project root and define your environment variables, e.g.:
+   Copy the .env.example file to .env in the project root and configure your environment variables, e.g.:
    ```ini
-    GOOGLE_CLIENT_ID=
-    GOOGLE_CLIENT_SECRET=
-    SECRET_KEY= 
-    ACCESS_SECRET=
-    REFRESH_SECRET=
-    REFRESH_TOKEN_EXPIRE_DAYS=
-    ACCESS_TOKEN_EXPIRE_MINUTES=
-    JWT_ALGORITHM=HS256
-    REFRESH_COOKIE_NAME=
-    ACCESS_COOKIE_NAME=
+   cp .env.example .env
    ```
 5. **Run the app**
    ```bash
@@ -57,7 +51,3 @@ A FastAPI-based backend project featuring authentication, authorization, and pos
 
 License
 This project is licensed under the MIT License.
-
-
-   
-

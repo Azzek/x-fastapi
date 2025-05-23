@@ -5,7 +5,6 @@ from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 import uuid
 
-
 class User(Base):
     
     __tablename__ = 'users'
