@@ -2,13 +2,12 @@
 
 A FastAPI-based backend project featuring authentication, authorization, and post management. Designed for simplicity, speed, and scalability.
 
-## 🚀 Features
+## Features
 
+- Logging in / Register users witch google OAuth 2.0
 - JWT-based Authentication and Authorization
 - Create, Read, Update, and Delete (CRUD) operations for Posts
 - Role-based access control
-- Environment variable support with `.env`
--  Dependency injection and modern Python async support
 - Input validation with Pydantic
 
 ## Tech Stack
@@ -29,15 +28,15 @@ A FastAPI-based backend project featuring authentication, authorization, and pos
    ```
 
 2. Create and activate a virtual environment
-  ```bash
-  python -m venv venv
-  source venv/bin/activate  # on Windows use: venv\Scripts\activate
-  ```
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # on Windows use: venv\Scripts\activate
+   ```
 
 3. Install dependencies
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 4. et up your .env file
    Create a .env file in the project root and define your environment variables, e.g.:
    ```ini
@@ -53,9 +52,9 @@ A FastAPI-based backend project featuring authentication, authorization, and pos
     ACCESS_COOKIE_NAME=
    ```
 5. run the app
-  ```bash
-  uvicorn main:app --reload
-  ```
+   ```bash
+   uvicorn main:app --reload
+   ```
 
 License
 This project is licensed under the MIT License.
