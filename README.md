@@ -12,7 +12,7 @@ A FastAPI-based backend project featuring authentication, authorization, and pos
 ## Tech Stack
 
 - [FastAPI](https://fastapi.tiangolo.com/)
-- [SQLAlchemy](https://www.sqlalchemy.org/) (or your ORM of choice)
+- [SQLAlchemy](https://www.sqlalchemy.org/) 
 - [Pydantic](https://docs.pydantic.dev/)
 - [Uvicorn](https://www.uvicorn.org/) as the ASGI server
 - [python-jose](https://pypi.org/project/python-jose/) for JWT handling
