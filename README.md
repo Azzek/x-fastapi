@@ -1,5 +1,4 @@
 # X-FastAPI
-
 A FastAPI-based backend project featuring authentication, authorization, and post management. Designed for simplicity, speed, and scalability.
 
 ## Features
@@ -27,17 +26,17 @@ A FastAPI-based backend project featuring authentication, authorization, and pos
    cd x-fastapi
    ```
 
-2. Create and activate a virtual environment
+2. **Create and activate a virtual environment**
    ```bash
    python -m venv venv
    source venv/bin/activate  # on Windows use: venv\Scripts\activate
    ```
 
-3. Install dependencies
+3. **Install dependencies**
    ```bash
    pip install -r requirements.txt
    ```
-4. et up your .env file
+4. **Get up your .env file**
    Create a .env file in the project root and define your environment variables, e.g.:
    ```ini
     GOOGLE_CLIENT_ID=
@@ -51,7 +50,7 @@ A FastAPI-based backend project featuring authentication, authorization, and pos
     REFRESH_COOKIE_NAME=
     ACCESS_COOKIE_NAME=
    ```
-5. run the app
+5. **Run the app**
    ```bash
    uvicorn main:app --reload
    ```
