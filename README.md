@@ -4,7 +4,7 @@ A FastAPI-based backend project featuring authentication, authorization, and pos
 
 ## Features
 
-- Logging in / Register users witch google OAuth 2.0
+- Logging in / Register users with google OAuth 2.0
 - JWT-based Authentication and Authorization
 - Create, Read, Update, and Delete (CRUD) operations for Posts
 - Role-based access control
