@@ -17,7 +17,6 @@ def get_current_user(request:Request, response:Response, db:Session = Depends(ge
     try:
         
         user_id = decode_access_token(token)
-      
         stmt = select(User).where(User.id == UUID(user_id))
         user = db.scalars(stmt).first()
         

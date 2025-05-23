@@ -8,11 +8,9 @@ from utils.auth import get_current_user
 from services.posts import PostsService
 from uuid import UUID
 
-
 roter = APIRouter(
     prefix='/posts', tags=['posts']
 )
-
 
 @roter.post(
     '/',
@@ -29,7 +27,6 @@ def create_post(
 ):
     return PostsService.create(db, user, post.model_dump())
 
-
 @roter.delete(
     '/{post_id}',
     tags=['posts'],
@@ -38,14 +35,12 @@ def create_post(
     response_model=PostResponse
 )
 
-
 def delete_post(
     post_id: UUID,
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user)
 ):
     return PostsService.delete_post(db, user, post_id)
-
 
 @roter.put(
     '/{post_id}',
