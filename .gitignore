@@ -42,6 +42,7 @@ __pydantic__/
 # dotenv
 .env
 .env.*
+!.env.example
 
 # migrations (if using alembic)
 migrations/versions/
