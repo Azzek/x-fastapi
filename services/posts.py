@@ -83,3 +83,10 @@ class PostsService:
         
         return PostResponse(msg='ok', post_id=post.id)
         
+    
+    @staticmethod
+    def get_user_posts(db: Session, user: User):
+        smtp = select(Post).where(Post.author_id == user.id)
+        posts = db.scalars(smtp).all()
+
+        return posts

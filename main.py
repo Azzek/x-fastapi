@@ -11,4 +11,4 @@ app.add_middleware(SessionMiddleware, secret_key=os.getenv("SESSION_SECRET_KEY")
 Base.metadata.create_all(bind=engine)
 
 app.include_router(auth.router)
-app.include_router(posts.roter)
+app.include_router(posts.router)

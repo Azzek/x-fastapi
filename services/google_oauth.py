@@ -2,7 +2,7 @@ from fastapi import Request
 from starlette.config import Config
 from authlib.integrations.starlette_client import OAuth
 from config import GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET
-
+print(GOOGLE_CLIENT_ID)
 
 config = Config(environ={
     'GOOGLE_CLIENT_ID': GOOGLE_CLIENT_ID,

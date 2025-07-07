@@ -7,14 +7,15 @@ from db.database import get_db
 from utils.auth import get_current_user
 from services.posts import PostsService
 from uuid import UUID
+from typing import List
 
 
-roter = APIRouter(
+router = APIRouter(
     prefix='/posts', tags=['posts']
 )
 
 
-@roter.post(
+@router.post(
     '/',
     tags=['posts'], 
     description='Endpoint that creates a new note',
@@ -30,7 +31,7 @@ def create_post(
     return PostsService.create(db, user, post.model_dump())
 
 
-@roter.delete(
+@router.delete(
     '/{post_id}',
     tags=['posts'],
     description='Endpoint that delete a note by id',
@@ -47,7 +48,7 @@ def delete_post(
     return PostsService.delete_post(db, user, post_id)
 
 
-@roter.put(
+@router.put(
     '/{post_id}',
     tags=['posts'],
     description='Endpoint that uptade post by id',
@@ -61,4 +62,19 @@ def delete_post(
     user: User = Depends(get_current_user)
 ):
     return PostsService.update(db, user, post_request, post_id)
+
+
+@router.get(
+    '/',
+    tags=['posts'],
+    description='Endpoint that gets all user posts',
+    status_code=status.HTTP_200_OK,
+    response_model=List[PostRequest]
+)
+def get_user_posts(
+    user_id: UUID,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user)
+):
+    return PostsService.get_user_posts(db, user)
 
